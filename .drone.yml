@@ -6,6 +6,10 @@ env:
 script:
   - gem install bundler
   - bundle install
+  - psql -c "update pg_database set datistemplate=false where datname='template1'" -U postgres -h 127.0.0.1
+  - psql -c "drop database template1"
+  - psql -c "create database template1 with owner=postgres template=template0 encoding='UTF8'" -U postgres -h 127.0.0.1
+  - psql -c "update pg_database set datistemplate=true where datname='template1'"
   - psql -c "create user shareup with createdb password 'shareup'" -U postgres -h 127.0.0.1
   - bundle exec rake db:create
   - bundle exec rake db:schema:load
