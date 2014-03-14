@@ -1,5 +1,5 @@
 ---
-image: bradrydzewski/ruby
+image: bradrydzewski/ruby:2.0.0
 env:
   - RAILS_ENV=test
   - SECRET_TOKEN=9747d0a1606e529a6bc18dbe3ebddbd9a748ae91201e157623f8aa43834e0a898bbf9342a91420580675a1050165f052fa8d58d1264f91b8bc152f3847aaebe8
