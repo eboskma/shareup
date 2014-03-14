@@ -1,0 +1,18 @@
+---
+image: bradrydzewski/ruby
+script:
+  - gem install bundler
+  - bundle install
+  - bundle exec rake rspec
+services:
+  - postgresql
+notify:
+  email:
+    recipients:
+      - erwin@datarift.nl
+  hipchat:
+    room: "DroneCI/shareup"
+    token: 1FIrmgsWkcECbPotYWjYSkSHHyfeH35YEfE8W6fO
+    on_started: true
+    on_success: true
+    on_failure: true
