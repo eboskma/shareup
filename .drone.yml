@@ -17,8 +17,8 @@ notify:
     recipients:
       - erwin@datarift.nl
   hipchat:
-    room: "DroneCI/shareup"
-    token: 1FIrmgsWkcECbPotYWjYSkSHHyfeH35YEfE8W6fO
+    room: {{hipchat_room}}
+    token: {{hipchat_token}}
     on_started: true
     on_success: true
     on_failure: true
