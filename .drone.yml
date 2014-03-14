@@ -5,7 +5,7 @@ script:
   - bundle install
   - bundle exec rake rspec
 services:
-  - postgresql
+  - postgres
 notify:
   email:
     recipients:
