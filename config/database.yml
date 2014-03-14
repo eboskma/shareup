@@ -20,7 +20,7 @@ development:
   database: shareup_development
   pool: 5
   username: shareup
-  password:
+  password: shareup
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -49,7 +49,7 @@ test:
   database: shareup_test
   pool: 5
   username: shareup
-  password:
+  password: shareup
 
 production:
   adapter: postgresql
