@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20140313135936) do
 
   create_table "authorizations", force: true do |t|
     t.string   "provider"
-    t.string   "uuid"
+    t.string   "uid"
     t.integer  "user_id"
     t.string   "token"
     t.string   "secret"
