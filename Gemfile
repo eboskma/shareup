@@ -14,6 +14,13 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails', '~> 3.1.0'
 
+# AngularJS
+gem 'angularjs-rails', '~> 1.2.14'
+gem 'ngmin-rails', '~> 0.4.0'
+
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.1.1'
+
 # Use HAML
 gem 'haml', '~> 4.0.5'
 gem 'haml-rails', '~> 0.5.3'
@@ -43,6 +50,8 @@ end
 group :development do
   gem 'spring', '~> 1.1.0'
   gem 'spring-commands-rspec', '~> 1.0.1'
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'pry-theme', '~> 0.2.0'
 end
 
 group :test do

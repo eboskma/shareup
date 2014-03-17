@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Dashboard</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="list-group">
+    <a href="{{ article.link }}" target="_blank" class="list-group-item" data-ng-repeat="article in articles | orderBy:publishedDate:false">
+      <h4 class="list-group-heading">{{ article.title }}</h4>
+      <p class="list-group-item-text">{{ article.publishedDate | date:"dd-MM-yyyy HH:mm:ss" }}</p>
+    </a>
+  </div>
+</div>
