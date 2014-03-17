@@ -8,11 +8,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       user = auth.first.user
     else 
       unless current_user
-        user = current_user
-      else
         user = User.from_social_name(name)
+      else
+        user = current_user
       end
-
+      
       unless auth = user.authorizations.find_by_provider('twitter')
         auth = user.authorizations.build provider: 'twitter', uid: uid
         user.authorizations << auth
@@ -22,7 +22,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         token: auth_hash['credentials']['token'],
         secret: auth_hash['credentials']['secret'],
         name: name,
-        url: "http://twitter.com/#{name}"
+        url: "https://twitter.com/#{auth_hash['info']['nickname']}"
       )
     end
 
