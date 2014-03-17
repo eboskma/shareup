@@ -1,4 +1,4 @@
-angular.module 'shareupApp.services', []
+angular.module 'shareupApp.services'
   .factory 'ArticleService', ($http, $q) ->
     getLatestFeed: ->
       d = $q.defer();
