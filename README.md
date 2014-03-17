@@ -1,6 +1,6 @@
 == README
 
-[![Build Status](http://droneci.datarift.nl/github.com/eboskma/shareup/status.png?branch=master)](http://droneci.datarift.nl/github.com/eboskma/shareup)
+[![Build Status](http://droneci.datarift.nl/github.com/eboskma/shareup/status.svg?branch=master)](http://droneci.datarift.nl/github.com/eboskma/shareup)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
