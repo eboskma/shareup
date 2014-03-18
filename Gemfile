@@ -26,7 +26,7 @@ gem 'haml', '~> 4.0.5'
 gem 'haml-rails', '~> 0.5.3'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.0'
 gem 'oj', '~> 2.6.0'
 
 group :doc do
@@ -51,7 +51,7 @@ group :development do
   gem 'spring', '~> 1.1.0'
   gem 'spring-commands-rspec', '~> 1.0.1'
   gem 'pry-rails', '~> 0.3.2'
-  gem 'pry-theme', '~> 0.2.0'
+  gem 'pry-theme', '~> 1.0.2'
 end
 
 group :test do
@@ -59,8 +59,8 @@ group :test do
   gem 'guard-rspec', '~> 4.2.5'
   gem 'poltergeist', '~> 1.5.0'
   gem 'capybara', '~> 2.2.1'
-  gem 'factory_girl_rails', '~> 4.3.0'
-  gem 'faker', '~> 1.2.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
+  gem 'faker', '~> 1.3.0'
   gem 'database_cleaner', '~> 1.2.0'
   gem 'rb-fsevent', '~> 0.9.4', require:  false if RUBY_PLATFORM =~ /darwin/i
   gem 'diff-lcs', '~> 1.1.3'
