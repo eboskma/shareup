@@ -1,7 +1,7 @@
 Shareup::Application.routes.draw do
   get '/dashboard' => 'welcome#dashboard'
   
-  namespace :api do
+  scope :api do
     resources :shares
   end
 

@@ -3,11 +3,12 @@
   'ngResource'
   'shareupApp.controllers'
   'shareupApp.services'
+  'shareupApp.directives'
 ]
   
 @app.config ($routeProvider) ->
     $routeProvider.when '/',
-      templateUrl: '/templates/dashboard.html'
+      templateUrl: '/assets/dashboard.html'
       controller: 'HomeController'
       resolve: 
         session: (SessionService) ->
@@ -15,5 +16,6 @@
     .otherwise
       redirectTo: '/'
       
-angular.module 'shareupApp.controllers', []
+angular.module 'shareupApp.controllers', ['ngSanitize']
 angular.module 'shareupApp.services', ['ngResource']
+angular.module 'shareupApp.directives', []

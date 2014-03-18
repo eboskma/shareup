@@ -36,5 +36,7 @@ module Shareup
               feature_specs: true
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
+    
+    config.assets.paths << Rails.root.join('app', 'assets', 'templates')
   end
 end

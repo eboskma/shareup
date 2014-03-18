@@ -1,0 +1,37 @@
+%nav.navbar.navbar-default{ role: 'navigation' }
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{ type: 'button', data: { toggle: 'collapse', target: '#navbar-main' } }
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{ href: '#/' } ShareUp
+    
+    #navbar-main.collapse.navbar-collapse
+      %p.navbar-text Welcome back {{ user.name }}
+      %p.navbar-text.navbar-right
+        %a{ href: '/users/sign_out' } Sign out
+        
+.container
+  .row
+    .col-md-12
+      .list-group
+        .list-group-item{ data: { ng_repeat: "article in articles | orderBy:publishedDate:false" } }
+          .row
+            .col-md-10
+              %h4.list-group-heading 
+                %a{ href: "{{ article.link }}", target: "_blank" } {{ article.title }}
+              %p.list-group-item-date {{ article.publishedDate | date:"dd-MM-yyyy HH:mm:ss" }}
+              %p.list-group-item-text{ data: { ng_bind_html: "article.content" } }
+            .col-md-2
+              %div{ data: { ng_hide: 'showShareBox' } }
+                %a{ data: { ng_click: 'showShareBox = !showShareBox' }} Share with a friend
+              %div{ data: { ng_show: 'showShareBox' } }
+                %form{ name: 'shareForm' }
+                  .form-group
+                    %label{ for: 'share-with' } Share with a friend
+                    %input{ type: 'text', placeholder: 'Email or username', data: { ng_model: 'newShare.recipient', is_user_or_email: '' } }
+                  .form-group
+                    %input.btn.btn-danger{ type: 'button', value: 'Cancel', data: { ng_click: 'showShareBox = !showShareBox' } }
+                    %input.btn.btn-primary{ type: 'submit', value: 'Share', data: { ng_click: 'showShareBox = !showShareBox; share(article)', ng_disabled: 'shareForm.$invalid' } }

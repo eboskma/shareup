@@ -1,1 +1,9 @@
 @import 'bootstrap';
+
+.list-group-item {
+  .list-group-item-date {
+    font-size: 12px;
+    font-style: italic;
+    color: #aaa;
+  }
+}
