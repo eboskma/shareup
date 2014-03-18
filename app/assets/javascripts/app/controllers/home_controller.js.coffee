@@ -4,7 +4,7 @@ angular.module 'shareupApp.controllers'
       .then (data) ->
         # console.log data
         $scope.articles = data
-    
+
     $scope.user = session.user
     
     $scope.newShare = 
