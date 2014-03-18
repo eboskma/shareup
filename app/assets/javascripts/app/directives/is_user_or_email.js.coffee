@@ -10,7 +10,6 @@ angular.module 'shareupApp.directives'
           data:
             name: input
         .then (data) ->
-          console.log data
           if data.status == 200
             d.resolve data.data
           else
