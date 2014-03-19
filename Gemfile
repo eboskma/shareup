@@ -43,6 +43,8 @@ end
 group :development do
   gem 'spring', '~> 1.1.0'
   gem 'spring-commands-rspec', '~> 1.0.1'
+  gem 'pry-rails', '~> 0.3.2'
+  gem 'pry-theme', '~> 1.0.2'
 end
 
 group :test do
