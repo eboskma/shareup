@@ -3,10 +3,13 @@ image: bradrydzewski/ruby:2.1.1
 env:
   - RAILS_ENV=test
   - SECRET_TOKEN=9747d0a1606e529a6bc18dbe3ebddbd9a748ae91201e157623f8aa43834e0a898bbf9342a91420580675a1050165f052fa8d58d1264f91b8bc152f3847aaebe8
+  - TWITTER_ID={{twitter_id}}
+  - TWITTER_SECRET={{twitter_secret}}
 script:
   - echo "====== Setting up environment ======"
   - gem install bundler
   - bundle install
+  - cp config/app_config.sample.yml config/app_config.yml
   - echo "====== Setting up database ======"
   - psql -c "update pg_database set datistemplate=false where datname='template1'" -U postgres -h 127.0.0.1
   - psql -c "drop database template1" -U postgres -h 127.0.0.1

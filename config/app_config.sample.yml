@@ -1,0 +1,16 @@
+defaults: &defaults
+  twitter:
+    client_id: client_id
+    client_secret: client_secret
+    
+development:
+  <<: *defaults
+  
+test:
+  <<: *defaults
+  twitter:
+    client_id: <%= ENV['TWITTER_ID'] %>
+    client_secret: <%= ENV['TWITTER_SECRET'] %>
+  
+production:
+  <<: *defaults
